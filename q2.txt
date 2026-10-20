@@ -1,0 +1,17 @@
+1. Top-left half
+(200,150)
+(200,450)
+(600,450)
+Bottom-Right half
+(200,150)
+(600,450)
+(600,150)
+
+2. So we store the four vertices in an index buffer, with a mapping from indice to value.
+We store two values for each, at 4 bytes for each value and an indice for each triangle vertex, gives 2 * 4 * 4 + 6 * 4, 56.
+Comparing this to original value of 2 * 4 * 6, which is 48, and it's worse to use an index buffer here.
+
+Trying doubles instead we get 2 * 8 * 4 + 6 * 4, 88 and 2 * 8 * 6, 96.
+So in case of doubles, using an index buffer is better.
+
+3. The normalized UV coordinates are about (0.75, 0.5033), with the 3 repeating.

@@ -1,0 +1,2 @@
+Increasing Theta in our world space, with y being pointed downwards means that it rotates clockwise.
+Swapping the y-axis leads to rotation becoming counterclockwise.
